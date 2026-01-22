@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class FindTheNumbeOfDigitsDividedByThree {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the size of the box:");
+        int n=sc.nextInt();
+        int[] box=new int[n];
+        int i,count=0;
+        System.out.println("Enter the digits in the box:");
+        for(i=0;i<box.length;i++)
+        {
+            box[i]=sc.nextInt();
+        }
+        //find the numbers of digits divided by three logic implementation
+        for(i=0;i<box.length;i++)
+        {
+            if(box[i]%3==0)
+            {
+                count+=1;
+            }
+        }
+        System.out.println("Find the number of digits divided by three:" + count);
+        sc.close();
+    }
+}
